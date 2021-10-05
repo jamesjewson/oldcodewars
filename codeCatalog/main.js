@@ -49,3 +49,36 @@ function alphabetPosition(text) {
   }
 
   ////////////////////////////////////////////
+
+  // In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". You have function with one side of the DNA (string, except for Haskell); you need to get the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
+
+  // More similar exercise are found here: http://rosalind.info/problems/list-view/ (source)
+  
+  // Example: (input --> output)
+  
+  // "ATTGC" --> "TAACG"
+  // "GTAT" --> "CATA"
+  // dnaStrand []        `shouldBe` []
+  // dnaStrand [A,T,G,C] `shouldBe` [T,A,C,G]
+  // dnaStrand [G,T,A,T] `shouldBe` [C,A,T,A]
+  // dnaStrand [A,A,A,A] `shouldBe` [T,T,T,T]
+
+
+
+
+  function DNAStrand(dna){
+    //your code here
+    dna = dna.toString().split('')
+    newDNA = dna.map(item =>{
+      if(item === "A"){
+        return "T"
+      }else if(item === "T"){
+        return "A"
+      }else if(item === "G"){
+        return "C"
+      }else if(item === "C"){
+        return "G"
+      }
+    })
+   return newDNA.join('')
+  }
