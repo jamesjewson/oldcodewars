@@ -13,7 +13,7 @@
 
 # What is this?
 
-- This is simply a place for me to  upload all of my completed CodeWars solutions.
+- This is simply a place for me to  upload some of my completed CodeWars solutions.
 
 # Why is it so messy?
 
